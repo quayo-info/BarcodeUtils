@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package se.injoin.gs1utils;
+package com.injoin.gs1utils;
 
 final class Internals {
 

@@ -1,4 +1,4 @@
-package com.hibcc.hibcc;
+package com.hibcc;
 
 import java.text.DateFormat;
 import java.text.ParseException;
