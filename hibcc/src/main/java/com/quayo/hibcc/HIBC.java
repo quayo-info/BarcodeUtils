@@ -1,4 +1,4 @@
-package com.quayo.hibcc;
+package com.hibcc.hibcc;
 
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.DefaultDateTimeFormatInfo;

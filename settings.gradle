@@ -1,3 +1,2 @@
-include ':gs1utils'
 include ':app'
 rootProject.name = "Barcode Reader"
