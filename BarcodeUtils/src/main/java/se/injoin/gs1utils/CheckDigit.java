@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.injoin.gs1utils;
+package se.injoin.gs1utils;
 
 /**
  * Utility methods for calculating and validating check digits as used by GS1 in data structures such as GTIN, GLN and SSCC.

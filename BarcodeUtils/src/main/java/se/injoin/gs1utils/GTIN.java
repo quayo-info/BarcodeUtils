@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.injoin.gs1utils;
+package se.injoin.gs1utils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.injoin.gs1utils.Internals.isDigits;
-import static com.injoin.gs1utils.Internals.leftPadWithZeroes;
-import static com.injoin.gs1utils.Internals.startsWithNZeroes;
+import static se.injoin.gs1utils.Internals.isDigits;
+import static se.injoin.gs1utils.Internals.leftPadWithZeroes;
+import static se.injoin.gs1utils.Internals.startsWithNZeroes;
 
 /**
  * Utility methods for global trade item numbers (GTIN).

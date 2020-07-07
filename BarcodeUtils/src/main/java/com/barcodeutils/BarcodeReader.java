@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.hibcc.HIBC;
-import com.injoin.gs1utils.ApplicationIdentifier;
-import com.injoin.gs1utils.ElementStrings;
+import se.injoin.gs1utils.ApplicationIdentifier;
+import se.injoin.gs1utils.ElementStrings;
 
 import java.util.Calendar;
 import java.util.Date;
