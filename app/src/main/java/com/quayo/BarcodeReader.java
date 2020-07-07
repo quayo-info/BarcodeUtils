@@ -10,7 +10,7 @@ import com.injoin.gs1utils.ElementStrings;
 import java.util.Calendar;
 import java.util.Date;
 
-public class BarcodeUtils {
+public class BarcodeReader {
     private final String barcode;
     private final @NonNull
     ElementStrings.ParseResult resultGTIN;
@@ -19,7 +19,7 @@ public class BarcodeUtils {
     private final boolean isGTIN;
     private final boolean isHIBC;
 
-    public BarcodeUtils(String barcode) {
+    public BarcodeReader(String barcode) {
         this.barcode = barcode;
 
         resultGTIN = ElementStrings.parse(barcode);
