@@ -1,4 +1,4 @@
-package com.quayo.barcodereader;
+package com.quayo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
