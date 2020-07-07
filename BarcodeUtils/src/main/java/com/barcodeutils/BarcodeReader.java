@@ -1,4 +1,4 @@
-package com.quayo.barcodeutils;
+package com.barcodeutils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
