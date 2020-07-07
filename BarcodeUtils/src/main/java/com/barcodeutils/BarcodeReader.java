@@ -60,7 +60,7 @@ public class BarcodeReader {
                 return null;
 
             Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(date.substring(0, 2)));
+            calendar.set(Calendar.MONTH, Integer.parseInt(date.substring(0, 2)));
             calendar.set(Calendar.YEAR, 2000 + Integer.parseInt(date.substring(2)));
 
             return calendar.getTime();
