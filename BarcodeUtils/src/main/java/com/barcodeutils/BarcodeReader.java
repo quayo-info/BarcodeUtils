@@ -25,7 +25,7 @@ public class BarcodeReader {
         boolean isGTIN = !resultGTIN.isPartial() && !resultGTIN.isEmpty();
 
         decodedHIBC = isGTIN ? null : new HIBC().decode(barcode);
-        boolean isHIBC = !isGTIN && decodedHIBC != null;
+        boolean isHIBC = !isGTIN && decodedHIBC != null && decodedHIBC.getError() == null;
 
         barcodeType = isGTIN ? BarcodeType.GTIN : isHIBC ? BarcodeType.HIBC : BarcodeType.STANDARD;
     }
@@ -34,6 +34,7 @@ public class BarcodeReader {
         return barcodeType;
     }
 
+    @Nullable
     public String getItemCode() {
         if (barcodeType == BarcodeType.GTIN)
             return resultGTIN.getString(ApplicationIdentifier.GTIN);
