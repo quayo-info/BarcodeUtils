@@ -36,8 +36,10 @@ public class BarcodeReader {
 
     @Nullable
     public String getItemCode() {
-        if (barcodeType == BarcodeType.GTIN)
-            return resultGTIN.getString(ApplicationIdentifier.GTIN);
+        if (barcodeType == BarcodeType.GTIN) {
+            String code = resultGTIN.getString(ApplicationIdentifier.GTIN);
+            return code == null ? resultGTIN.getString(ApplicationIdentifier.SSCC) : code;
+        }
         if (barcodeType == BarcodeType.HIBC)
             return decodedHIBC.getProduct();
         return barcode;
