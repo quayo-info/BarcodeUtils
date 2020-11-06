@@ -38,6 +38,9 @@ public class BarcodeReader {
     public String getItemCode() {
         if (barcodeType == BarcodeType.GTIN) {
             String code = resultGTIN.getString(ApplicationIdentifier.GTIN);
+            if(code == null)
+                code = resultGTIN.getString(ApplicationIdentifier.CONTAINED_GTIN);
+
             return code == null ? resultGTIN.getString(ApplicationIdentifier.SSCC) : code;
         }
         if (barcodeType == BarcodeType.HIBC)
@@ -75,6 +78,15 @@ public class BarcodeReader {
             return decodedHIBC.getProperty() == HIBC.PropertyType.LOT ? decodedHIBC.getPropertyValue() : null;
 
         return null;
+    }
+
+    public int getQuantity(){
+        if(barcodeType == BarcodeType.GTIN){
+            String quantity = resultGTIN.getString(ApplicationIdentifier.COUNT_OF_TRADE_ITEMS);
+            return quantity == null ? 0 : Integer.parseInt(quantity);
+        }
+
+        return 0;
     }
 
     public String getBarcode() {
