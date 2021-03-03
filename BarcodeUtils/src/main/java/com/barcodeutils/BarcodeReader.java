@@ -83,7 +83,7 @@ public class BarcodeReader {
     public int getQuantity(){
         if(barcodeType == BarcodeType.GTIN){
             String quantity = resultGTIN.getString(ApplicationIdentifier.COUNT_OF_TRADE_ITEMS);
-            return quantity == null ? 1 : Integer.parseInt(quantity);
+            return quantity == null ?  1 : Integer.parseInt(quantity);
         }
 
         return 0;
