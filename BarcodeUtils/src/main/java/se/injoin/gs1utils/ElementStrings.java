@@ -326,7 +326,7 @@ public class ElementStrings {
                 boolean lastOfMonth = day == 0;
                 day = day == 0 ? 1 : day;
                 calendar.clear();
-                calendar.setLenient(false);
+//                calendar.setLenient(false);
                 calendar.set(year, month - 1, day, hour, minutes, seconds);
                 if (lastOfMonth) {
                     calendar.add(Calendar.MONTH, 1);
