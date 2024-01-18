@@ -69,9 +69,13 @@ public class BarcodeReader {
     }
 
     @Nullable
-    public String getLot() {
+    public String getLot(boolean isBatch) {
         if (barcodeType == BarcodeType.GTIN) {
-            String serialNumber = resultGTIN.getString(ApplicationIdentifier.SERIAL_NUMBER);
+            String serialNumber =null;
+            if (isBatch)
+                serialNumber = resultGTIN.getString(ApplicationIdentifier.BATCH_OR_LOT_NUMBER);
+            if (serialNumber==null)
+             serialNumber = resultGTIN.getString(ApplicationIdentifier.SERIAL_NUMBER);
             return serialNumber == null ? resultGTIN.getString(ApplicationIdentifier.BATCH_OR_LOT_NUMBER) : serialNumber;
         }
         if (barcodeType == BarcodeType.HIBC)
